@@ -82,7 +82,7 @@ def sugerir_tratamiento():
 # Función para obtener tratamiento usando LLM
 def obtener_tratamiento(riesgo):
     response = client.chat.completions.create(
-        model="ramiro:instruct",
+        model="llama3",
         messages=[
             {"role": "system", "content": "Responde en español, eres una herramienta para gestión de riesgos ISO 27001..."},
             {"role": "user", "content": "mi teléfono móvil;Acceso no autorizado;un atacante puede acceder..."},
@@ -95,7 +95,7 @@ def obtener_tratamiento(riesgo):
 # Función para obtener riesgos usando LLM
 def obtener_riesgos(activo):
     response = client.chat.completions.create(
-        model="ramiro:instruct",
+        model="llama3",
         messages=[
             {"role": "system", "content": "Responde en español, eres una herramienta para gestión de riesgos ISO 27001..."},
             {"role": "user", "content": "mi raspberry pi"},
